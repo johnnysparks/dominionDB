@@ -15,7 +15,7 @@
 		92BE70E31689329700ED4BE6 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70E21689329600ED4BE6 /* Default-Portrait~ipad.png */; };
 		92BE70E51689329C00ED4BE6 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70E41689329C00ED4BE6 /* Default-Landscape~ipad.png */; };
 		92BE70E8168944E100ED4BE6 /* dominion.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70E7168942F100ED4BE6 /* dominion.sqlite */; };
-		F2184057162B7EEA0082EC2C /* AuthorDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2184056162B7EEA0082EC2C /* AuthorDetailView.m */; };
+		F2184057162B7EEA0082EC2C /* CardDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2184056162B7EEA0082EC2C /* CardDetailView.m */; };
 		F21896E7148D953C00309A50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21896E6148D953C00309A50 /* UIKit.framework */; };
 		F21896E9148D953C00309A50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21896E8148D953C00309A50 /* Foundation.framework */; };
 		F21896EB148D953C00309A50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21896EA148D953C00309A50 /* CoreGraphics.framework */; };
@@ -24,7 +24,7 @@
 		F21896F7148D953C00309A50 /* kcbAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F21896F6148D953C00309A50 /* kcbAppDelegate.m */; };
 		F21896FA148D953C00309A50 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21896F8148D953C00309A50 /* MainStoryboard.storyboard */; };
 		F218970B148D983A00309A50 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = F218970A148D983900309A50 /* Card.m */; };
-		F218970E148DA0E900309A50 /* AuthorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F218970D148DA0E900309A50 /* AuthorVC.m */; };
+		F218970E148DA0E900309A50 /* ListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F218970D148DA0E900309A50 /* ListView.m */; };
 		F2C887CC14D8C4CB003BFC2D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C887CB14D8C4CB003BFC2D /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
@@ -37,23 +37,23 @@
 		92BE70E21689329600ED4BE6 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		92BE70E41689329C00ED4BE6 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		92BE70E7168942F100ED4BE6 /* dominion.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dominion.sqlite; sourceTree = "<group>"; };
-		F2184055162B7EEA0082EC2C /* AuthorDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorDetailView.h; sourceTree = "<group>"; };
-		F2184056162B7EEA0082EC2C /* AuthorDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorDetailView.m; sourceTree = "<group>"; };
-		F21896E2148D953C00309A50 /* FirstTableProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstTableProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2184055162B7EEA0082EC2C /* CardDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDetailView.h; sourceTree = "<group>"; };
+		F2184056162B7EEA0082EC2C /* CardDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDetailView.m; sourceTree = "<group>"; };
+		F21896E2148D953C00309A50 /* DominionDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21896E6148D953C00309A50 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F21896E8148D953C00309A50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F21896EA148D953C00309A50 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F21896EE148D953C00309A50 /* FirstTableProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FirstTableProject-Info.plist"; sourceTree = "<group>"; };
+		F21896EE148D953C00309A50 /* DominionDB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DominionDB-Info.plist"; sourceTree = "<group>"; };
 		F21896F0148D953C00309A50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F21896F2148D953C00309A50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F21896F4148D953C00309A50 /* FirstTableProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstTableProject-Prefix.pch"; sourceTree = "<group>"; };
+		F21896F4148D953C00309A50 /* DominionDB-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DominionDB-Prefix.pch"; sourceTree = "<group>"; };
 		F21896F5148D953C00309A50 /* kcbAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kcbAppDelegate.h; sourceTree = "<group>"; };
 		F21896F6148D953C00309A50 /* kcbAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kcbAppDelegate.m; sourceTree = "<group>"; };
 		F21896F9148D953C00309A50 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F2189709148D983900309A50 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		F218970A148D983900309A50 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
-		F218970C148DA0E900309A50 /* AuthorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorVC.h; sourceTree = "<group>"; };
-		F218970D148DA0E900309A50 /* AuthorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorVC.m; sourceTree = "<group>"; };
+		F218970C148DA0E900309A50 /* ListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListView.h; sourceTree = "<group>"; };
+		F218970D148DA0E900309A50 /* ListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListView.m; sourceTree = "<group>"; };
 		F2C887CB14D8C4CB003BFC2D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		F2C887D214D8CA91003BFC2D /* AuthorsDb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = AuthorsDb.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,7 +82,7 @@
 				92BE70DE1689328400ED4BE6 /* Default-Landscape@2x~ipad.png */,
 				92BE70DC1689326D00ED4BE6 /* apple-touch-icon-72x72.png */,
 				92BE70DA1689325300ED4BE6 /* apple-touch-icon-144x144.png */,
-				F21896EC148D953C00309A50 /* FirstTableProject */,
+				F21896EC148D953C00309A50 /* classes */,
 				F21896E5148D953C00309A50 /* Frameworks */,
 				F21896E3148D953C00309A50 /* Products */,
 			);
@@ -91,7 +91,7 @@
 		F21896E3148D953C00309A50 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F21896E2148D953C00309A50 /* FirstTableProject.app */,
+				F21896E2148D953C00309A50 /* DominionDB.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,7 +107,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F21896EC148D953C00309A50 /* FirstTableProject */ = {
+		F21896EC148D953C00309A50 /* classes */ = {
 			isa = PBXGroup;
 			children = (
 				F2C887D214D8CA91003BFC2D /* AuthorsDb.sqlite */,
@@ -119,21 +119,22 @@
 				F21896ED148D953C00309A50 /* Supporting Files */,
 				F2189709148D983900309A50 /* Card.h */,
 				F218970A148D983900309A50 /* Card.m */,
-				F218970C148DA0E900309A50 /* AuthorVC.h */,
-				F218970D148DA0E900309A50 /* AuthorVC.m */,
-				F2184055162B7EEA0082EC2C /* AuthorDetailView.h */,
-				F2184056162B7EEA0082EC2C /* AuthorDetailView.m */,
+				F218970C148DA0E900309A50 /* ListView.h */,
+				F218970D148DA0E900309A50 /* ListView.m */,
+				F2184055162B7EEA0082EC2C /* CardDetailView.h */,
+				F2184056162B7EEA0082EC2C /* CardDetailView.m */,
 			);
+			name = classes;
 			path = FirstTableProject;
 			sourceTree = "<group>";
 		};
 		F21896ED148D953C00309A50 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F21896EE148D953C00309A50 /* FirstTableProject-Info.plist */,
+				F21896EE148D953C00309A50 /* DominionDB-Info.plist */,
 				F21896EF148D953C00309A50 /* InfoPlist.strings */,
 				F21896F2148D953C00309A50 /* main.m */,
-				F21896F4148D953C00309A50 /* FirstTableProject-Prefix.pch */,
+				F21896F4148D953C00309A50 /* DominionDB-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -141,9 +142,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F21896E1148D953C00309A50 /* FirstTableProject */ = {
+		F21896E1148D953C00309A50 /* DominionDB */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F2189700148D953C00309A50 /* Build configuration list for PBXNativeTarget "FirstTableProject" */;
+			buildConfigurationList = F2189700148D953C00309A50 /* Build configuration list for PBXNativeTarget "DominionDB" */;
 			buildPhases = (
 				F21896DE148D953C00309A50 /* Sources */,
 				F21896DF148D953C00309A50 /* Frameworks */,
@@ -153,9 +154,9 @@
 			);
 			dependencies = (
 			);
-			name = FirstTableProject;
+			name = DominionDB;
 			productName = FirstTableProject;
-			productReference = F21896E2148D953C00309A50 /* FirstTableProject.app */;
+			productReference = F21896E2148D953C00309A50 /* DominionDB.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -167,7 +168,7 @@
 				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = kCodebook;
 			};
-			buildConfigurationList = F21896DC148D953C00309A50 /* Build configuration list for PBXProject "FirstTableProject" */;
+			buildConfigurationList = F21896DC148D953C00309A50 /* Build configuration list for PBXProject "DominionDB" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -179,7 +180,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F21896E1148D953C00309A50 /* FirstTableProject */,
+				F21896E1148D953C00309A50 /* DominionDB */,
 			);
 		};
 /* End PBXProject section */
@@ -212,8 +213,8 @@
 				F21896F3148D953C00309A50 /* main.m in Sources */,
 				F21896F7148D953C00309A50 /* kcbAppDelegate.m in Sources */,
 				F218970B148D983A00309A50 /* Card.m in Sources */,
-				F218970E148DA0E900309A50 /* AuthorVC.m in Sources */,
-				F2184057162B7EEA0082EC2C /* AuthorDetailView.m in Sources */,
+				F218970E148DA0E900309A50 /* ListView.m in Sources */,
+				F2184057162B7EEA0082EC2C /* CardDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,10 +289,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FirstTableProject/FirstTableProject-Prefix.pch";
-				INFOPLIST_FILE = "FirstTableProject/FirstTableProject-Info.plist";
+				GCC_PREFIX_HEADER = "FirstTableProject/DominionDB-Prefix.pch";
+				INFOPLIST_FILE = "FirstTableProject/DominionDB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DominionDB;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -301,10 +302,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FirstTableProject/FirstTableProject-Prefix.pch";
-				INFOPLIST_FILE = "FirstTableProject/FirstTableProject-Info.plist";
+				GCC_PREFIX_HEADER = "FirstTableProject/DominionDB-Prefix.pch";
+				INFOPLIST_FILE = "FirstTableProject/DominionDB-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DominionDB;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -313,7 +314,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F21896DC148D953C00309A50 /* Build configuration list for PBXProject "FirstTableProject" */ = {
+		F21896DC148D953C00309A50 /* Build configuration list for PBXProject "DominionDB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F21896FE148D953C00309A50 /* Debug */,
@@ -322,7 +323,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F2189700148D953C00309A50 /* Build configuration list for PBXNativeTarget "FirstTableProject" */ = {
+		F2189700148D953C00309A50 /* Build configuration list for PBXNativeTarget "DominionDB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F2189701148D953C00309A50 /* Debug */,
