@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92BE70BE1688F62F00ED4BE6 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70BD1688F62F00ED4BE6 /* iPad.storyboard */; };
+		92BE70DB1689325300ED4BE6 /* apple-touch-icon-144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70DA1689325300ED4BE6 /* apple-touch-icon-144x144.png */; };
+		92BE70DD1689326D00ED4BE6 /* apple-touch-icon-72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70DC1689326D00ED4BE6 /* apple-touch-icon-72x72.png */; };
+		92BE70DF1689328400ED4BE6 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70DE1689328400ED4BE6 /* Default-Landscape@2x~ipad.png */; };
+		92BE70E11689328C00ED4BE6 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70E01689328C00ED4BE6 /* Default-Portrait@2x~ipad.png */; };
+		92BE70E31689329700ED4BE6 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70E21689329600ED4BE6 /* Default-Portrait~ipad.png */; };
+		92BE70E51689329C00ED4BE6 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70E41689329C00ED4BE6 /* Default-Landscape~ipad.png */; };
+		92BE70E8168944E100ED4BE6 /* dominion.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70E7168942F100ED4BE6 /* dominion.sqlite */; };
+		F2184057162B7EEA0082EC2C /* AuthorDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2184056162B7EEA0082EC2C /* AuthorDetailView.m */; };
 		F21896E7148D953C00309A50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21896E6148D953C00309A50 /* UIKit.framework */; };
 		F21896E9148D953C00309A50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21896E8148D953C00309A50 /* Foundation.framework */; };
 		F21896EB148D953C00309A50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21896EA148D953C00309A50 /* CoreGraphics.framework */; };
@@ -14,23 +23,39 @@
 		F21896F3148D953C00309A50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F21896F2148D953C00309A50 /* main.m */; };
 		F21896F7148D953C00309A50 /* kcbAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F21896F6148D953C00309A50 /* kcbAppDelegate.m */; };
 		F21896FA148D953C00309A50 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21896F8148D953C00309A50 /* MainStoryboard.storyboard */; };
-		F21896FD148D953C00309A50 /* kcbViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F21896FC148D953C00309A50 /* kcbViewController.m */; };
+		F218970B148D983A00309A50 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = F218970A148D983900309A50 /* Card.m */; };
+		F218970E148DA0E900309A50 /* AuthorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F218970D148DA0E900309A50 /* AuthorVC.m */; };
+		F2C887CC14D8C4CB003BFC2D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C887CB14D8C4CB003BFC2D /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		92BE70BD1688F62F00ED4BE6 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
+		92BE70DA1689325300ED4BE6 /* apple-touch-icon-144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon-144x144.png"; sourceTree = "<group>"; };
+		92BE70DC1689326D00ED4BE6 /* apple-touch-icon-72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon-72x72.png"; sourceTree = "<group>"; };
+		92BE70DE1689328400ED4BE6 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		92BE70E01689328C00ED4BE6 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		92BE70E21689329600ED4BE6 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		92BE70E41689329C00ED4BE6 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		92BE70E7168942F100ED4BE6 /* dominion.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dominion.sqlite; sourceTree = "<group>"; };
+		F2184055162B7EEA0082EC2C /* AuthorDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorDetailView.h; sourceTree = "<group>"; };
+		F2184056162B7EEA0082EC2C /* AuthorDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorDetailView.m; sourceTree = "<group>"; };
 		F21896E2148D953C00309A50 /* FirstTableProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstTableProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21896E6148D953C00309A50 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F21896E8148D953C00309A50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F21896EA148D953C00309A50 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F21896EE148D953C00309A50 /* FirstTableProject-Info.plist */ = {isa = PBXFileReference; path = "FirstTableProject-Info.plist"; sourceTree = "<group>"; };
+		F21896EE148D953C00309A50 /* FirstTableProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FirstTableProject-Info.plist"; sourceTree = "<group>"; };
 		F21896F0148D953C00309A50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F21896F2148D953C00309A50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F21896F4148D953C00309A50 /* FirstTableProject-Prefix.pch */ = {isa = PBXFileReference; path = "FirstTableProject-Prefix.pch"; sourceTree = "<group>"; };
-		F21896F5148D953C00309A50 /* kcbAppDelegate.h */ = {isa = PBXFileReference; path = kcbAppDelegate.h; sourceTree = "<group>"; };
+		F21896F4148D953C00309A50 /* FirstTableProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirstTableProject-Prefix.pch"; sourceTree = "<group>"; };
+		F21896F5148D953C00309A50 /* kcbAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kcbAppDelegate.h; sourceTree = "<group>"; };
 		F21896F6148D953C00309A50 /* kcbAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kcbAppDelegate.m; sourceTree = "<group>"; };
 		F21896F9148D953C00309A50 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		F21896FB148D953C00309A50 /* kcbViewController.h */ = {isa = PBXFileReference; path = kcbViewController.h; sourceTree = "<group>"; };
-		F21896FC148D953C00309A50 /* kcbViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kcbViewController.m; sourceTree = "<group>"; };
+		F2189709148D983900309A50 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		F218970A148D983900309A50 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		F218970C148DA0E900309A50 /* AuthorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorVC.h; sourceTree = "<group>"; };
+		F218970D148DA0E900309A50 /* AuthorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorVC.m; sourceTree = "<group>"; };
+		F2C887CB14D8C4CB003BFC2D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		F2C887D214D8CA91003BFC2D /* AuthorsDb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = AuthorsDb.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +66,7 @@
 				F21896E7148D953C00309A50 /* UIKit.framework in Frameworks */,
 				F21896E9148D953C00309A50 /* Foundation.framework in Frameworks */,
 				F21896EB148D953C00309A50 /* CoreGraphics.framework in Frameworks */,
+				F2C887CC14D8C4CB003BFC2D /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +76,12 @@
 		F21896D7148D953C00309A50 = {
 			isa = PBXGroup;
 			children = (
+				92BE70E41689329C00ED4BE6 /* Default-Landscape~ipad.png */,
+				92BE70E21689329600ED4BE6 /* Default-Portrait~ipad.png */,
+				92BE70E01689328C00ED4BE6 /* Default-Portrait@2x~ipad.png */,
+				92BE70DE1689328400ED4BE6 /* Default-Landscape@2x~ipad.png */,
+				92BE70DC1689326D00ED4BE6 /* apple-touch-icon-72x72.png */,
+				92BE70DA1689325300ED4BE6 /* apple-touch-icon-144x144.png */,
 				F21896EC148D953C00309A50 /* FirstTableProject */,
 				F21896E5148D953C00309A50 /* Frameworks */,
 				F21896E3148D953C00309A50 /* Products */,
@@ -67,6 +99,7 @@
 		F21896E5148D953C00309A50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2C887CB14D8C4CB003BFC2D /* libsqlite3.0.dylib */,
 				F21896E6148D953C00309A50 /* UIKit.framework */,
 				F21896E8148D953C00309A50 /* Foundation.framework */,
 				F21896EA148D953C00309A50 /* CoreGraphics.framework */,
@@ -77,12 +110,19 @@
 		F21896EC148D953C00309A50 /* FirstTableProject */ = {
 			isa = PBXGroup;
 			children = (
+				F2C887D214D8CA91003BFC2D /* AuthorsDb.sqlite */,
+				92BE70E7168942F100ED4BE6 /* dominion.sqlite */,
 				F21896F5148D953C00309A50 /* kcbAppDelegate.h */,
 				F21896F6148D953C00309A50 /* kcbAppDelegate.m */,
 				F21896F8148D953C00309A50 /* MainStoryboard.storyboard */,
-				F21896FB148D953C00309A50 /* kcbViewController.h */,
-				F21896FC148D953C00309A50 /* kcbViewController.m */,
+				92BE70BD1688F62F00ED4BE6 /* iPad.storyboard */,
 				F21896ED148D953C00309A50 /* Supporting Files */,
+				F2189709148D983900309A50 /* Card.h */,
+				F218970A148D983900309A50 /* Card.m */,
+				F218970C148DA0E900309A50 /* AuthorVC.h */,
+				F218970D148DA0E900309A50 /* AuthorVC.m */,
+				F2184055162B7EEA0082EC2C /* AuthorDetailView.h */,
+				F2184056162B7EEA0082EC2C /* AuthorDetailView.m */,
 			);
 			path = FirstTableProject;
 			sourceTree = "<group>";
@@ -149,8 +189,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BE70E8168944E100ED4BE6 /* dominion.sqlite in Resources */,
 				F21896F1148D953C00309A50 /* InfoPlist.strings in Resources */,
 				F21896FA148D953C00309A50 /* MainStoryboard.storyboard in Resources */,
+				92BE70BE1688F62F00ED4BE6 /* iPad.storyboard in Resources */,
+				92BE70DB1689325300ED4BE6 /* apple-touch-icon-144x144.png in Resources */,
+				92BE70DD1689326D00ED4BE6 /* apple-touch-icon-72x72.png in Resources */,
+				92BE70DF1689328400ED4BE6 /* Default-Landscape@2x~ipad.png in Resources */,
+				92BE70E11689328C00ED4BE6 /* Default-Portrait@2x~ipad.png in Resources */,
+				92BE70E31689329700ED4BE6 /* Default-Portrait~ipad.png in Resources */,
+				92BE70E51689329C00ED4BE6 /* Default-Landscape~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +211,9 @@
 			files = (
 				F21896F3148D953C00309A50 /* main.m in Sources */,
 				F21896F7148D953C00309A50 /* kcbAppDelegate.m in Sources */,
-				F21896FD148D953C00309A50 /* kcbViewController.m in Sources */,
+				F218970B148D983A00309A50 /* Card.m in Sources */,
+				F218970E148DA0E900309A50 /* AuthorVC.m in Sources */,
+				F2184057162B7EEA0082EC2C /* AuthorDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +290,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FirstTableProject/FirstTableProject-Prefix.pch";
 				INFOPLIST_FILE = "FirstTableProject/FirstTableProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -251,7 +303,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FirstTableProject/FirstTableProject-Prefix.pch";
 				INFOPLIST_FILE = "FirstTableProject/FirstTableProject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -275,6 +329,7 @@
 				F2189702148D953C00309A50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

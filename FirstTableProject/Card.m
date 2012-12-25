@@ -1,13 +1,16 @@
 //
-//  kcbViewController.h
+//  Card
 //  FirstTableProject
 //
 //  Created by Kevin Languedoc on 12/5/11.
 //  Copyright (c) 2011 kCodebook. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Card.h"
 
-@interface kcbViewController : UIViewController
+@implementation Card
+@synthesize name;
+@synthesize title;
+@synthesize genre;
 
 @end
