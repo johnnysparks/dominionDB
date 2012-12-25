@@ -61,6 +61,7 @@
     NSLog(@"test %@", card.name);
     NSLog(@"test %@", card.set);
     NSLog(@"test %@", card.type_1);
+    NSLog(@"test %d", card.cost_coins);
 	}
 
 
