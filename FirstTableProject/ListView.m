@@ -73,6 +73,16 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
+    
+    return YES;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -86,7 +96,13 @@
 {
 
     // Return the number of rows in the section.
-    return [self.kingdom_cards count];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [search_results count];
+        
+    } else {
+        return [self.kingdom_cards count];
+    }
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -99,12 +115,32 @@
     }
     int rowCount = indexPath.row;
 
-    Card *card = [self.kingdom_cards objectAtIndex:rowCount];
-	cell.textLabel.text = card.name;
-	cell.detailTextLabel.text = card.set;
-
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        Card *card = [search_results objectAtIndex:rowCount];
+        cell.textLabel.text = card.name;
+        cell.detailTextLabel.text = card.set;
+    } else {
+        Card *card = [self.kingdom_cards objectAtIndex:rowCount];
+        cell.textLabel.text = card.name;
+        cell.detailTextLabel.text = card.set;
+    }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        [self performSegueWithIdentifier: @"showCardDetails" sender: self];
+    }
+}
+
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF.name contains[cd] %@", searchText];
+    //[NSPredicate predicateWithFormat:@"SELF.name contains[cd] %@ OR SELF.set contains[cd] %@", searchText, searchText];
+    
+    search_results = [kingdom_cards filteredArrayUsingPredicate:resultPredicate];
 }
 
 
@@ -184,17 +220,19 @@
     
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-   // if ([[segue identifier] isEqualToString:@"AuthorsDetail"]) {
+
     CardDetailView *detailViewController = [segue destinationViewController];
-    Card *card = [[Card alloc]init];
-    detailViewController.card = [self.card_list objectAtIndex:[self.tableView indexPathForSelectedRow].row];
-    card = [self.card_list objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     
-    NSLog(@"test %@", card.name);
-    NSLog(@"test %@", card.set);
-    NSLog(@"test %@", card.type_1);
+    NSIndexPath *indexPath = nil;
+    
+    if ([self.searchDisplayController isActive]) {
+        indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+        detailViewController.card = [search_results objectAtIndex:indexPath.row];
         
-  //  }
+    } else {
+        detailViewController.card = [self.card_list objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    }
+        
 }
 
 @end

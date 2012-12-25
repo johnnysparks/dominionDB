@@ -13,6 +13,7 @@
 
 @interface ListView : UITableViewController{
     NSMutableArray *kingdom_cards;
+    NSArray *search_results;
     sqlite3 * db;
 
 }
