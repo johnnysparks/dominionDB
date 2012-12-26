@@ -18,6 +18,7 @@
 		92F86009168971690019D3FF /* apple-touch-icon-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F86008168971690019D3FF /* apple-touch-icon-57x57.png */; };
 		92F8600C1689716B0019D3FF /* apple-touch-icon-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F8600B1689716B0019D3FF /* apple-touch-icon-114x114.png */; };
 		92F86019168A30710019D3FF /* KingdomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F86018168A30710019D3FF /* KingdomView.m */; };
+		92F8601C168A31C70019D3FF /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F8601B168A31C70019D3FF /* CardCell.m */; };
 		F2184057162B7EEA0082EC2C /* CardDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2184056162B7EEA0082EC2C /* CardDetailView.m */; };
 		F21896E7148D953C00309A50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21896E6148D953C00309A50 /* UIKit.framework */; };
 		F21896E9148D953C00309A50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21896E8148D953C00309A50 /* Foundation.framework */; };
@@ -47,6 +48,8 @@
 		92F86011168971840019D3FF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		92F86017168A30710019D3FF /* KingdomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KingdomView.h; sourceTree = "<group>"; };
 		92F86018168A30710019D3FF /* KingdomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KingdomView.m; sourceTree = "<group>"; };
+		92F8601A168A31C70019D3FF /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
+		92F8601B168A31C70019D3FF /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
 		F2184055162B7EEA0082EC2C /* CardDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDetailView.h; sourceTree = "<group>"; };
 		F2184056162B7EEA0082EC2C /* CardDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDetailView.m; sourceTree = "<group>"; };
 		F21896E2148D953C00309A50 /* DominionDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DominionDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +149,8 @@
 				F2184056162B7EEA0082EC2C /* CardDetailView.m */,
 				92F86017168A30710019D3FF /* KingdomView.h */,
 				92F86018168A30710019D3FF /* KingdomView.m */,
+				92F8601A168A31C70019D3FF /* CardCell.h */,
+				92F8601B168A31C70019D3FF /* CardCell.m */,
 			);
 			name = classes;
 			path = FirstTableProject;
@@ -241,6 +246,7 @@
 				F218970E148DA0E900309A50 /* ListView.m in Sources */,
 				F2184057162B7EEA0082EC2C /* CardDetailView.m in Sources */,
 				92F86019168A30710019D3FF /* KingdomView.m in Sources */,
+				92F8601C168A31C70019D3FF /* CardCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
