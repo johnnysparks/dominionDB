@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		929A2D7F168CBAB000C4386E /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 929A2D7E168CBAB000C4386E /* Query.m */; };
 		92BE70BE1688F62F00ED4BE6 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70BD1688F62F00ED4BE6 /* iPad.storyboard */; };
 		92BE70DB1689325300ED4BE6 /* apple-touch-icon-144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70DA1689325300ED4BE6 /* apple-touch-icon-144x144.png */; };
 		92BE70DD1689326D00ED4BE6 /* apple-touch-icon-72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70DC1689326D00ED4BE6 /* apple-touch-icon-72x72.png */; };
@@ -33,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		929A2D7D168CBAB000C4386E /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Query.h; sourceTree = "<group>"; };
+		929A2D7E168CBAB000C4386E /* Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Query.m; sourceTree = "<group>"; };
 		92BE70BD1688F62F00ED4BE6 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		92BE70DA1689325300ED4BE6 /* apple-touch-icon-144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon-144x144.png"; sourceTree = "<group>"; };
 		92BE70DC1689326D00ED4BE6 /* apple-touch-icon-72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon-72x72.png"; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 				92F86018168A30710019D3FF /* KingdomView.m */,
 				92F8601A168A31C70019D3FF /* CardCell.h */,
 				92F8601B168A31C70019D3FF /* CardCell.m */,
+				929A2D7D168CBAB000C4386E /* Query.h */,
+				929A2D7E168CBAB000C4386E /* Query.m */,
 			);
 			name = classes;
 			path = FirstTableProject;
@@ -247,6 +252,7 @@
 				F2184057162B7EEA0082EC2C /* CardDetailView.m in Sources */,
 				92F86019168A30710019D3FF /* KingdomView.m in Sources */,
 				92F8601C168A31C70019D3FF /* CardCell.m in Sources */,
+				929A2D7F168CBAB000C4386E /* Query.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

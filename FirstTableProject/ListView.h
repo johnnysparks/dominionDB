@@ -20,6 +20,6 @@
 @property(nonatomic,retain) NSMutableArray *kingdom_cards;
 @property(nonatomic, strong)CardDetailView *details;
 
--(NSMutableArray *) card_list;
+-(NSMutableArray *) get_cards;
 @end
  

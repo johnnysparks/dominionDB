@@ -62,8 +62,12 @@
     NSLog(@"test %@", card.set);
     NSLog(@"test %@", card.type_1);
     NSLog(@"test %d", card.cost_coins);
-	}
+    
+}
 
+- (IBAction)close_modal:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 - (void)viewDidUnload
