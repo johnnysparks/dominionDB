@@ -2,13 +2,13 @@
 //  Card.h
 //  DominionDB
 //
-//  Created by Kevin Languedoc on 12/5/11.
-//  Copyright (c) 2011 kCodebook. All rights reserved.
+//  Created by Brandon Dusseau on 12/25/12.
+//  Copyright (c) 2012 Malechite. All rights reserved.
 //
-
 #import <Foundation/Foundation.h>
 
 @interface Card : NSObject{
+    int id;
     NSString *name;
     NSString *set;
     NSString *type_1;
@@ -25,6 +25,7 @@
     NSString *description;
 }
 
+@property(nonatomic) int id;
 @property(nonatomic,copy) NSString *name;
 @property(nonatomic,copy) NSString *set;
 @property(nonatomic,copy) NSString *type_1;

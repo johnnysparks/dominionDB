@@ -26,7 +26,7 @@
 		F21896EB148D953C00309A50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21896EA148D953C00309A50 /* CoreGraphics.framework */; };
 		F21896F1148D953C00309A50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F21896EF148D953C00309A50 /* InfoPlist.strings */; };
 		F21896F3148D953C00309A50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F21896F2148D953C00309A50 /* main.m */; };
-		F21896F7148D953C00309A50 /* kcbAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F21896F6148D953C00309A50 /* kcbAppDelegate.m */; };
+		F21896F7148D953C00309A50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F21896F6148D953C00309A50 /* AppDelegate.m */; };
 		F21896FA148D953C00309A50 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21896F8148D953C00309A50 /* MainStoryboard.storyboard */; };
 		F218970B148D983A00309A50 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = F218970A148D983900309A50 /* Card.m */; };
 		F218970E148DA0E900309A50 /* ListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F218970D148DA0E900309A50 /* ListView.m */; };
@@ -63,8 +63,8 @@
 		F21896F0148D953C00309A50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F21896F2148D953C00309A50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F21896F4148D953C00309A50 /* DominionDB-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DominionDB-Prefix.pch"; sourceTree = "<group>"; };
-		F21896F5148D953C00309A50 /* kcbAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kcbAppDelegate.h; sourceTree = "<group>"; };
-		F21896F6148D953C00309A50 /* kcbAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kcbAppDelegate.m; sourceTree = "<group>"; };
+		F21896F5148D953C00309A50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F21896F6148D953C00309A50 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F21896F9148D953C00309A50 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F2189709148D983900309A50 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
 		F218970A148D983900309A50 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 			children = (
 				F21896ED148D953C00309A50 /* Supporting Files */,
 				92BE70E7168942F100ED4BE6 /* dominion.sqlite */,
-				F21896F5148D953C00309A50 /* kcbAppDelegate.h */,
-				F21896F6148D953C00309A50 /* kcbAppDelegate.m */,
+				F21896F5148D953C00309A50 /* AppDelegate.h */,
+				F21896F6148D953C00309A50 /* AppDelegate.m */,
 				F21896F8148D953C00309A50 /* MainStoryboard.storyboard */,
 				92BE70BD1688F62F00ED4BE6 /* iPad.storyboard */,
 				F2189709148D983900309A50 /* Card.h */,
@@ -246,7 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21896F3148D953C00309A50 /* main.m in Sources */,
-				F21896F7148D953C00309A50 /* kcbAppDelegate.m in Sources */,
+				F21896F7148D953C00309A50 /* AppDelegate.m in Sources */,
 				F218970B148D983A00309A50 /* Card.m in Sources */,
 				F218970E148DA0E900309A50 /* ListView.m in Sources */,
 				F2184057162B7EEA0082EC2C /* CardDetailView.m in Sources */,

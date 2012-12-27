@@ -1,9 +1,9 @@
 //
-//  AuthorVC.m
-//  FirstTableProject
+//  AppDelegate.m
+//  DominionDB
 //
-//  Created by Kevin Languedoc on 12/5/11.
-//  Copyright (c) 2011 kCodebook. All rights reserved.
+//  Created by Brandon Dusseau on 12/25/12.
+//  Copyright (c) 2012 Malechite. All rights reserved.
 //
 
 #import "ListView.h"

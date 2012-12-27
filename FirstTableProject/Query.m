@@ -26,7 +26,7 @@
 
 - (void) create_query {
     sql = options;
-    //this is where i will build a query statement based on an object passed
+    //this is where i will build a query statement based on an object of options passed
 }
 
 - (void) get_cards{
@@ -55,6 +55,7 @@
             while (sqlite3_step(sqlStatement)==SQLITE_ROW) {
                 Card * card = [[Card alloc] init];
                 
+                const int  *column_id                 = (const int  *)sqlite3_column_int(sqlStatement,0);
                 const char *column_name               = (const char *)sqlite3_column_text(sqlStatement,1);
                 const char *column_set                = (const char *)sqlite3_column_text(sqlStatement,2);
                 const char *column_type_1             = (const char *)sqlite3_column_text(sqlStatement,3);
@@ -70,7 +71,7 @@
                 const char *column_bottom_text        = (const char *)sqlite3_column_text(sqlStatement,13);
                 const char *column_description        = (const char *)sqlite3_column_text(sqlStatement,14);
                 
-                
+                if(column_id                 != NULL) { card.id                 = (int) column_id; }
                 if(column_name               != NULL) { card.name               = [NSString stringWithUTF8String:(char *) column_name]; }
                 if(column_set                != NULL) { card.set                = [NSString stringWithUTF8String:(char *) column_set]; }
                 if(column_type_1             != NULL) { card.type_1             = [NSString stringWithUTF8String:(char *) column_type_1]; }

@@ -1,9 +1,9 @@
 //
-//  AuthorDetailView.m
-//  FirstTableProject
+//  CardDetailView.m
+//  DominionDB
 //
-//  Created by Kevin Languedoc on 10/14/12.
-//  Copyright (c) 2012 kCodebook. All rights reserved.
+//  Created by Brandon Dusseau on 12/25/12.
+//  Copyright (c) 2012 Malechite. All rights reserved.
 //
 
 #import "CardDetailView.h"

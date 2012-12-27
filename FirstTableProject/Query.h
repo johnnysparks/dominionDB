@@ -21,5 +21,6 @@
 @property(nonatomic) NSMutableArray *cards;
 
 - (void) get_cards;
+//+(NSMutableArray*) run:(NSObject*) options;
 
 @end

@@ -1,21 +1,18 @@
 //
-//  AuthorVC.h
-//  FirstTableProject
+//  ListView.h
+//  DominionDB
 //
-//  Created by Kevin Languedoc on 12/5/11.
-//  Copyright (c) 2011 kCodebook. All rights reserved.
+//  Created by Brandon Dusseau on 12/25/12.
+//  Copyright (c) 2012 Malechite. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <sqlite3.h>
 #import "CardDetailView.h"
 
 
 @interface ListView : UITableViewController{
     NSMutableArray *kingdom_cards;
     NSArray *search_results;
-    sqlite3 * db;
-
 }
 @property(nonatomic,retain) NSMutableArray *kingdom_cards;
 @property(nonatomic, strong)CardDetailView *details;
