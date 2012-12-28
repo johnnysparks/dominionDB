@@ -25,8 +25,30 @@
 }
 
 - (void) create_query {
-    sql = options;
-    //this is where i will build a query statement based on an object of options passed
+    if(options.type == @"list") {
+        sql = "SELECT * FROM kingdom_cards";
+    } else if(options.type == @"random") {
+        sql = "SELECT * FROM kingdom_cards ORDER BY RANDOM() LIMIT 10";
+    } else if(options.type == @"custom"){
+        //this is where i will build a query statement based on an object of options passed
+        NSString* query = @"SELECT * FROM kingdom_cards WHERE id IS NOT NULL AND expansion_set IN (";
+        NSMutableString *sqlStatement = [NSMutableString stringWithString:query];
+        
+        for(int i = 0; i < options.sets.count; i++) {
+            [sqlStatement appendString:@"'"];
+            [sqlStatement appendString:options.sets[i]];
+            [sqlStatement appendString:@"'"];
+            if(i+1 != options.sets.count) { [sqlStatement appendString:@", "]; }
+        }
+        
+        [sqlStatement appendString:@") ORDER BY RANDOM() LIMIT 10"];        
+        
+        
+        sql = [sqlStatement UTF8String];
+    } else {
+        sql = "SELECT * FROM kingdom_cards";
+    }
+    NSLog(@"%s", sql);
 }
 
 - (void) get_cards{

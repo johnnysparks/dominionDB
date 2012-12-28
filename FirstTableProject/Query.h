@@ -8,15 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
+#import "GameOptions.h"
 
 @interface Query : NSMutableArray{
     NSMutableArray *cards;
     sqlite3 * db;
-    const char *options;
+    GameOptions *options;
     const char *sql;
 }
 
-@property(nonatomic) const char *options;
+@property(nonatomic) GameOptions *options;
 @property(nonatomic) const char *sql;
 @property(nonatomic) NSMutableArray *cards;
 

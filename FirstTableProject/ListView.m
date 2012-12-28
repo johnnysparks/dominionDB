@@ -9,6 +9,7 @@
 #import "ListView.h"
 #import "Card.h"
 #import "Query.h"
+#import "GameOptions.h"
 
 
 @implementation ListView
@@ -145,8 +146,10 @@
 
 
 -(NSMutableArray *) get_cards{
+    GameOptions *options = [[GameOptions alloc] init];
     Query *query = [[Query alloc] init];
-    query.options = "SELECT * FROM kingdom_cards";
+    options.type = @"list";
+    query.options = options;
     [query get_cards];
     kingdom_cards = query.cards;
     return kingdom_cards;

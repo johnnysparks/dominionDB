@@ -16,5 +16,4 @@
 
 @property(nonatomic,retain) NSMutableArray *kingdom_cards;
 @property NSInteger selected_index;
-@property BOOL *custom;
 @end

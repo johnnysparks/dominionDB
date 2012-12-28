@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92750B44168CF00300216713 /* sets@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92750B43168CF00300216713 /* sets@2x.jpg */; };
+		92750B46168CF04100216713 /* sets.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92750B45168CF04100216713 /* sets.jpg */; };
+		92750B49168CF27900216713 /* RandomizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92750B48168CF27900216713 /* RandomizerView.m */; };
+		92750B4C168D0E0700216713 /* GameOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 92750B4B168D0E0700216713 /* GameOptions.m */; };
 		929A2D7F168CBAB000C4386E /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 929A2D7E168CBAB000C4386E /* Query.m */; };
 		92BE70BE1688F62F00ED4BE6 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70BD1688F62F00ED4BE6 /* iPad.storyboard */; };
 		92BE70DB1689325300ED4BE6 /* apple-touch-icon-144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70DA1689325300ED4BE6 /* apple-touch-icon-144x144.png */; };
@@ -34,6 +38,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		92750B43168CF00300216713 /* sets@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "sets@2x.jpg"; path = "FirstTableProject/images/sets@2x.jpg"; sourceTree = "<group>"; };
+		92750B45168CF04100216713 /* sets.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sets.jpg; path = FirstTableProject/images/sets.jpg; sourceTree = "<group>"; };
+		92750B47168CF27900216713 /* RandomizerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomizerView.h; sourceTree = "<group>"; };
+		92750B48168CF27900216713 /* RandomizerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomizerView.m; sourceTree = "<group>"; };
+		92750B4A168D0E0700216713 /* GameOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOptions.h; sourceTree = "<group>"; };
+		92750B4B168D0E0700216713 /* GameOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOptions.m; sourceTree = "<group>"; };
 		929A2D7D168CBAB000C4386E /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Query.h; sourceTree = "<group>"; };
 		929A2D7E168CBAB000C4386E /* Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Query.m; sourceTree = "<group>"; };
 		92BE70BD1688F62F00ED4BE6 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
@@ -91,6 +101,8 @@
 		92F86013168A175C0019D3FF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				92750B45168CF04100216713 /* sets.jpg */,
+				92750B43168CF00300216713 /* sets@2x.jpg */,
 				92F86011168971840019D3FF /* Default-568h@2x.png */,
 				92F8600F168971810019D3FF /* Default@2x.png */,
 				92F8600D168971710019D3FF /* Default.png */,
@@ -148,14 +160,18 @@
 				F218970A148D983900309A50 /* Card.m */,
 				F218970C148DA0E900309A50 /* ListView.h */,
 				F218970D148DA0E900309A50 /* ListView.m */,
-				F2184055162B7EEA0082EC2C /* CardDetailView.h */,
-				F2184056162B7EEA0082EC2C /* CardDetailView.m */,
+				92750B47168CF27900216713 /* RandomizerView.h */,
+				92750B48168CF27900216713 /* RandomizerView.m */,
 				92F86017168A30710019D3FF /* KingdomView.h */,
 				92F86018168A30710019D3FF /* KingdomView.m */,
+				F2184055162B7EEA0082EC2C /* CardDetailView.h */,
+				F2184056162B7EEA0082EC2C /* CardDetailView.m */,
 				92F8601A168A31C70019D3FF /* CardCell.h */,
 				92F8601B168A31C70019D3FF /* CardCell.m */,
 				929A2D7D168CBAB000C4386E /* Query.h */,
 				929A2D7E168CBAB000C4386E /* Query.m */,
+				92750B4A168D0E0700216713 /* GameOptions.h */,
+				92750B4B168D0E0700216713 /* GameOptions.m */,
 			);
 			name = classes;
 			path = FirstTableProject;
@@ -235,6 +251,8 @@
 				92BE70E51689329C00ED4BE6 /* Default-Landscape~ipad.png in Resources */,
 				92F86009168971690019D3FF /* apple-touch-icon-57x57.png in Resources */,
 				92F8600C1689716B0019D3FF /* apple-touch-icon-114x114.png in Resources */,
+				92750B44168CF00300216713 /* sets@2x.jpg in Resources */,
+				92750B46168CF04100216713 /* sets.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +271,8 @@
 				92F86019168A30710019D3FF /* KingdomView.m in Sources */,
 				92F8601C168A31C70019D3FF /* CardCell.m in Sources */,
 				929A2D7F168CBAB000C4386E /* Query.m in Sources */,
+				92750B49168CF27900216713 /* RandomizerView.m in Sources */,
+				92750B4C168D0E0700216713 /* GameOptions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

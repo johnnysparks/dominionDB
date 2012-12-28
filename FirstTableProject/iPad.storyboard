@@ -4,6 +4,148 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
+        <!--Randomizer View-->
+        <scene sceneID="uuF-2p-Mdt">
+            <objects>
+                <viewController id="gDl-6R-2Ck" customClass="RandomizerView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i6x-Xi-lJH">
+                        <rect key="frame" x="0.0" y="20" width="768" height="955"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" restorationIdentifier="set_base" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rdN-xW-Adk"/>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="create_game" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KxB-2V-BAI">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Create Game">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="create_game:" destination="gDl-6R-2Ck" eventType="touchUpInside" id="CJ1-rV-JHj"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="TopLeft" image="sets.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="w3l-aF-mSs">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1191" id="uLW-o4-CxT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Base Set" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmb-1J-Ajh">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" restorationIdentifier="set_intrigue" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XPI-2f-xhU"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Intrigue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uo-ym-I4b">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" restorationIdentifier="set_seaside" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VBv-Jz-dEO"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Seaside" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8W-kd-IRv">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" restorationIdentifier="set_alchemy" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iz4-Qg-OFE"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Alchemy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoD-8h-k57">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" restorationIdentifier="set_prosperity" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8lz-ej-QBX"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Prosperity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyh-a1-VQE">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" restorationIdentifier="set_cornucopia" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RGp-nO-nru"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cornucopia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ke-yQ-DbY">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" restorationIdentifier="set_hinterlands" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oco-uZ-HTd"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hinterlands" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuB-fZ-2BN">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" restorationIdentifier="set_darkages" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKt-W9-BLT"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dark Ages" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-qF-1TW">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" restorationIdentifier="set_promo" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPh-bf-yCK"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Promo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGO-1P-Vux">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8lz-ej-QBX" firstAttribute="top" secondItem="i6x-Xi-lJH" secondAttribute="top" constant="206" id="3DU-k0-8cU"/>
+                            <constraint firstItem="dKt-W9-BLT" firstAttribute="top" secondItem="i6x-Xi-lJH" secondAttribute="top" constant="345" id="54J-59-VpD"/>
+                            <constraint firstItem="XPI-2f-xhU" firstAttribute="centerY" secondItem="5uo-ym-I4b" secondAttribute="centerY" type="default" id="8S0-yw-OJ5"/>
+                            <constraint firstItem="VBv-Jz-dEO" firstAttribute="centerY" secondItem="H8W-kd-IRv" secondAttribute="centerY" type="default" id="9kb-pz-aD2"/>
+                            <constraint firstItem="iz4-Qg-OFE" firstAttribute="top" secondItem="i6x-Xi-lJH" secondAttribute="top" constant="159" id="BJb-Xw-u0G"/>
+                            <constraint firstItem="VBv-Jz-dEO" firstAttribute="top" secondItem="i6x-Xi-lJH" secondAttribute="top" constant="112" id="Dkw-oh-na9"/>
+                            <constraint firstItem="RPh-bf-yCK" firstAttribute="top" secondItem="i6x-Xi-lJH" secondAttribute="top" constant="390" id="HR6-At-cxB"/>
+                            <constraint firstItem="rdN-xW-Adk" firstAttribute="top" secondItem="i6x-Xi-lJH" secondAttribute="top" constant="20" symbolic="YES" type="default" id="HgO-hC-ac1"/>
+                            <constraint firstItem="Nn5-qF-1TW" firstAttribute="leading" secondItem="i6x-Xi-lJH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JSz-tA-0jN"/>
+                            <constraint firstItem="dKt-W9-BLT" firstAttribute="leading" secondItem="oco-uZ-HTd" secondAttribute="leading" type="default" id="KdW-Fp-T5e"/>
+                            <constraint firstItem="rdN-xW-Adk" firstAttribute="leading" secondItem="i6x-Xi-lJH" secondAttribute="leading" constant="123" id="Lxy-uj-2Od"/>
+                            <constraint firstItem="kmb-1J-Ajh" firstAttribute="leading" secondItem="i6x-Xi-lJH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="M4K-zi-f8b"/>
+                            <constraint firstItem="RPh-bf-yCK" firstAttribute="centerY" secondItem="HGO-1P-Vux" secondAttribute="centerY" type="default" id="NE2-aa-Rgf"/>
+                            <constraint firstItem="HGO-1P-Vux" firstAttribute="leading" secondItem="i6x-Xi-lJH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="NOw-yk-pXr"/>
+                            <constraint firstItem="VBv-Jz-dEO" firstAttribute="leading" secondItem="iz4-Qg-OFE" secondAttribute="leading" type="default" id="QEJ-zM-kcH"/>
+                            <constraint firstItem="XPI-2f-xhU" firstAttribute="leading" secondItem="VBv-Jz-dEO" secondAttribute="leading" type="default" id="SK4-Wo-xqx"/>
+                            <constraint firstItem="4Ke-yQ-DbY" firstAttribute="leading" secondItem="i6x-Xi-lJH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="TxS-IF-ZeE"/>
+                            <constraint firstItem="5uo-ym-I4b" firstAttribute="leading" secondItem="i6x-Xi-lJH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Vik-32-ewM"/>
+                            <constraint firstItem="w3l-aF-mSs" firstAttribute="leading" secondItem="i6x-Xi-lJH" secondAttribute="leading" type="default" id="Wn8-Eb-tPA"/>
+                            <constraint firstItem="XPI-2f-xhU" firstAttribute="leading" secondItem="rdN-xW-Adk" secondAttribute="leading" type="default" id="XzV-c8-CX1"/>
+                            <constraint firstItem="oco-uZ-HTd" firstAttribute="leading" secondItem="RGp-nO-nru" secondAttribute="leading" type="default" id="ZUn-f0-ocU"/>
+                            <constraint firstItem="8lz-ej-QBX" firstAttribute="centerY" secondItem="Gyh-a1-VQE" secondAttribute="centerY" type="default" id="b2j-0s-Kfg"/>
+                            <constraint firstItem="dKt-W9-BLT" firstAttribute="centerY" secondItem="Nn5-qF-1TW" secondAttribute="centerY" type="default" id="bau-Tv-dg5"/>
+                            <constraint firstItem="4Ke-yQ-DbY" firstAttribute="centerY" secondItem="RGp-nO-nru" secondAttribute="centerY" type="default" id="bfd-1X-nq3"/>
+                            <constraint firstItem="oco-uZ-HTd" firstAttribute="top" secondItem="i6x-Xi-lJH" secondAttribute="top" constant="298" id="brf-2f-faS"/>
+                            <constraint firstItem="hoD-8h-k57" firstAttribute="centerY" secondItem="iz4-Qg-OFE" secondAttribute="centerY" type="default" id="cxX-TM-cdc"/>
+                            <constraint firstItem="kmb-1J-Ajh" firstAttribute="centerY" secondItem="rdN-xW-Adk" secondAttribute="centerY" type="default" id="dHB-mq-60z"/>
+                            <constraint firstItem="XPI-2f-xhU" firstAttribute="top" secondItem="i6x-Xi-lJH" secondAttribute="top" constant="67" id="daE-2w-Ne4"/>
+                            <constraint firstItem="oco-uZ-HTd" firstAttribute="centerY" secondItem="SuB-fZ-2BN" secondAttribute="centerY" type="default" id="fR2-5g-zIT"/>
+                            <constraint firstItem="Gyh-a1-VQE" firstAttribute="leading" secondItem="i6x-Xi-lJH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gO7-Ax-8CE"/>
+                            <constraint firstItem="8lz-ej-QBX" firstAttribute="leading" secondItem="RGp-nO-nru" secondAttribute="leading" type="default" id="gr6-V8-Bcs"/>
+                            <constraint firstItem="w3l-aF-mSs" firstAttribute="bottom" secondItem="i6x-Xi-lJH" secondAttribute="bottom" type="default" id="hA7-hW-n3B"/>
+                            <constraint firstItem="hoD-8h-k57" firstAttribute="leading" secondItem="i6x-Xi-lJH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="htE-Cc-peS"/>
+                            <constraint firstItem="KxB-2V-BAI" firstAttribute="top" secondItem="i6x-Xi-lJH" secondAttribute="top" constant="408" id="m0E-6g-3UT"/>
+                            <constraint firstItem="H8W-kd-IRv" firstAttribute="leading" secondItem="i6x-Xi-lJH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="m56-CJ-D0w"/>
+                            <constraint firstItem="SuB-fZ-2BN" firstAttribute="leading" secondItem="i6x-Xi-lJH" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mZq-Gw-YCX"/>
+                            <constraint firstItem="RGp-nO-nru" firstAttribute="top" secondItem="i6x-Xi-lJH" secondAttribute="top" constant="253" id="nYj-Wo-ucu"/>
+                            <constraint firstItem="KxB-2V-BAI" firstAttribute="centerX" secondItem="i6x-Xi-lJH" secondAttribute="centerX" type="default" id="pmk-cd-7qX"/>
+                            <constraint firstItem="iz4-Qg-OFE" firstAttribute="leading" secondItem="8lz-ej-QBX" secondAttribute="leading" type="default" id="u8M-nU-CUx"/>
+                            <constraint firstItem="RPh-bf-yCK" firstAttribute="leading" secondItem="dKt-W9-BLT" secondAttribute="leading" type="default" id="yMd-T7-wbq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="Rzp-ab-Ylj"/>
+                    <connections>
+                        <outlet property="alchemy" destination="iz4-Qg-OFE" id="ZUd-ua-Pfs"/>
+                        <outlet property="base" destination="rdN-xW-Adk" id="5MM-fc-EOb"/>
+                        <outlet property="cornucopia" destination="RGp-nO-nru" id="8WB-u2-3Ul"/>
+                        <outlet property="darkages" destination="dKt-W9-BLT" id="Q8L-bu-2cb"/>
+                        <outlet property="hinterlands" destination="oco-uZ-HTd" id="qt7-E5-5i5"/>
+                        <outlet property="intrigue" destination="XPI-2f-xhU" id="ZGb-OY-jyS"/>
+                        <outlet property="promo" destination="RPh-bf-yCK" id="kUg-Yv-PPj"/>
+                        <outlet property="prosperity" destination="8lz-ej-QBX" id="Qwf-Mm-GfM"/>
+                        <outlet property="seaside" destination="VBv-Jz-dEO" id="heu-95-UCS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0RP-pv-7dR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="-2034"/>
+        </scene>
         <!--List View - Kingdom Cards-->
         <scene sceneID="pNo-St-ly4">
             <objects>
@@ -420,19 +562,87 @@
                     <connections>
                         <segue destination="EuF-FH-Kt2" kind="relationship" relationship="viewControllers" id="Jm3-lq-YiO"/>
                         <segue destination="Ld5-eP-XTy" kind="relationship" relationship="viewControllers" id="Cdr-i0-QOc"/>
+                        <segue destination="gDl-6R-2Ck" kind="relationship" relationship="viewControllers" id="tFO-4B-9Zf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UkK-cI-360" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-469" y="-399"/>
+            <point key="canvasLocation" x="-710" y="-266"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sets.jpg" width="1000" height="200"/>
+    </resources>
+    <classes>
+        <class className="CardCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CardCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="CardDetailView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CardDetailView.h"/>
+            <relationships>
+                <relationship kind="action" name="close_modal:"/>
+                <relationship kind="outlet" name="add_actions" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="add_buys" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="add_cards" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="add_coins" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="add_victory_tokens" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="bottom_text" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="cost_coins" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="cost_potions" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="description" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="set" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="top_text" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="type_1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="type_2" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="KingdomView" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KingdomView.h"/>
+        </class>
+        <class className="ListView" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ListView.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="RandomizerView" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RandomizerView.h"/>
+            <relationships>
+                <relationship kind="action" name="create_game:"/>
+                <relationship kind="outlet" name="alchemy" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="base" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="cornucopia" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="darkages" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="hinterlands" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="intrigue" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="promo" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="prosperity" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="seaside" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gvg-iE-g5S"/>
+        <segue reference="KBK-Xi-E7G"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -16,7 +16,6 @@
 
 @implementation KingdomView
 @synthesize kingdom_cards;
-@synthesize custom;
 @synthesize selected_index;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,7 +32,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self get_cards];
-    custom = false;
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,13 +64,9 @@
                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CardCell *card_cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CardCell" forIndexPath:indexPath];
-    
     int row = [indexPath row];
-    
     Card *card = kingdom_cards[row];
-    
-    card_cell.name.text = card.name;
-    
+    card_cell.name.text = card.name;    
     return card_cell;
 }
 
@@ -82,8 +76,10 @@
 }
 
 -(NSMutableArray *) get_cards{
+    GameOptions *options = [[GameOptions alloc] init];
     Query *query = [[Query alloc] init];
-    query.options = "SELECT * FROM kingdom_cards ORDER BY RANDOM() LIMIT 10";
+    options.type = @"random";
+    query.options = options;
     [query get_cards];
     kingdom_cards = query.cards;
     return kingdom_cards;
