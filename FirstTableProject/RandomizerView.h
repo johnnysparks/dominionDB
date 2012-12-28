@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KingdomView.h"
 
 @interface RandomizerView : UIViewController {
     NSMutableArray *kingdom_cards;
+    KingdomView *kingdomView;
 }
 
+@property (nonatomic, retain) KingdomView *kingdomView;
 @property(nonatomic,retain) NSMutableArray *kingdom_cards;
 @property (weak, nonatomic) IBOutlet UISwitch *base;
 @property (weak, nonatomic) IBOutlet UISwitch *intrigue;

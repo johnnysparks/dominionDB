@@ -18,6 +18,7 @@
 @implementation RandomizerView
 
 @synthesize kingdom_cards;
+@synthesize kingdomView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,6 +39,21 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) gotoKingdomView
+{
+    if(self.kingdomView == nil)
+    {
+        NSLog(@"no kingdom view");
+        KingdomView *kingdom = [self.storyboard instantiateViewControllerWithIdentifier:@"KingdomView"];
+        self.kingdomView = kingdom;
+    }
+    
+    kingdomView.kingdom_cards = kingdom_cards;
+    [kingdomView refresh_cards];
+    [self.tabBarController setSelectedIndex:1];
+    
 }
 
 - (IBAction)create_game:(id)sender {
@@ -72,10 +88,11 @@
     query.options = options;
     [query get_cards];
     kingdom_cards = query.cards;
-    for (int i =0; i < kingdom_cards.count; i++) {
-        Card *card = [kingdom_cards objectAtIndex:i];
-        NSLog(@"Name: %@", card.name);
-    }
+//    for (int i =0; i < kingdom_cards.count; i++) {
+//        Card *card = [kingdom_cards objectAtIndex:i];
+//        NSLog(@"Name: %@", card.name);
+//    }
+    [self gotoKingdomView];
 }
 
 @end

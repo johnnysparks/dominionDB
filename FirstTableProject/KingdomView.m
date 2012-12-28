@@ -70,18 +70,23 @@
     return card_cell;
 }
 
-- (IBAction)refresh_cards:(id)sender {
+- (void)refresh_cards {
+    NSLog(@"Refresh Cards");
     [self get_cards];
-    [self collectionView];
+    [self.collectionView reloadData];
 }
 
 -(NSMutableArray *) get_cards{
     GameOptions *options = [[GameOptions alloc] init];
     Query *query = [[Query alloc] init];
-    options.type = @"random";
-    query.options = options;
-    [query get_cards];
-    kingdom_cards = query.cards;
+    if(kingdom_cards == nil) {
+        options.type = @"random";
+        query.options = options;
+        [query get_cards];
+        kingdom_cards = query.cards;
+    }
+    Card *card = kingdom_cards[0];
+    NSLog(@"%@", card.name);
     return kingdom_cards;
 }
 

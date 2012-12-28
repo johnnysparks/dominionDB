@@ -14,6 +14,7 @@
     NSMutableArray *kingdom_cards;
 }
 
+- (void) refresh_cards;
 @property(nonatomic,retain) NSMutableArray *kingdom_cards;
 @property NSInteger selected_index;
 @end
