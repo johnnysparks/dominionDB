@@ -14,6 +14,7 @@
 
 @implementation ListView
 @synthesize kingdom_cards;
+@synthesize card_search;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -133,6 +134,7 @@
 {
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         [self performSegueWithIdentifier: @"showCardDetails" sender: self];
+        [card_search resignFirstResponder];
     }
 }
 
@@ -166,7 +168,7 @@
         detailViewController.card = [search_results objectAtIndex:indexPath.row];
         
     } else {
-        detailViewController.card = [self.get_cards objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        detailViewController.card = [self.kingdom_cards objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
         
 }

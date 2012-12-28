@@ -16,6 +16,7 @@
 }
 @property(nonatomic,retain) NSMutableArray *kingdom_cards;
 @property(nonatomic, strong)CardDetailView *details;
+@property (weak, nonatomic) IBOutlet UISearchBar *card_search;
 
 -(NSMutableArray *) get_cards;
 @end

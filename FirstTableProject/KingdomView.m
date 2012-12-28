@@ -17,6 +17,7 @@
 @implementation KingdomView
 @synthesize kingdom_cards;
 @synthesize selected_index;
+@synthesize loaded;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,7 +32,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self get_cards];
+    if(!loaded) {
+        NSLog(@"loaded");
+        [self get_cards];
+        loaded = true;
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,8 +91,10 @@
         [query get_cards];
         kingdom_cards = query.cards;
     }
-    Card *card = kingdom_cards[0];
-    NSLog(@"%@", card.name);
+    if(kingdom_cards.count > 0) {
+        Card *card = kingdom_cards[0];
+        NSLog(@"%@", card.name);
+    }    
     return kingdom_cards;
 }
 

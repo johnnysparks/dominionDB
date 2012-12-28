@@ -20,6 +20,7 @@
 		92BE70E31689329700ED4BE6 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70E21689329600ED4BE6 /* Default-Portrait~ipad.png */; };
 		92BE70E51689329C00ED4BE6 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70E41689329C00ED4BE6 /* Default-Landscape~ipad.png */; };
 		92BE70E8168944E100ED4BE6 /* dominion.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70E7168942F100ED4BE6 /* dominion.sqlite */; };
+		92EA0597168D75E900A77A66 /* dominion_shield.png in Resources */ = {isa = PBXBuildFile; fileRef = 92EA0596168D75E900A77A66 /* dominion_shield.png */; };
 		92F86009168971690019D3FF /* apple-touch-icon-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F86008168971690019D3FF /* apple-touch-icon-57x57.png */; };
 		92F8600C1689716B0019D3FF /* apple-touch-icon-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F8600B1689716B0019D3FF /* apple-touch-icon-114x114.png */; };
 		92F86019168A30710019D3FF /* KingdomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F86018168A30710019D3FF /* KingdomView.m */; };
@@ -54,6 +55,7 @@
 		92BE70E21689329600ED4BE6 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		92BE70E41689329C00ED4BE6 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		92BE70E7168942F100ED4BE6 /* dominion.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dominion.sqlite; sourceTree = "<group>"; };
+		92EA0596168D75E900A77A66 /* dominion_shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dominion_shield.png; path = FirstTableProject/images/dominion_shield.png; sourceTree = "<group>"; };
 		92F86008168971690019D3FF /* apple-touch-icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon-57x57.png"; sourceTree = "<group>"; };
 		92F8600B1689716B0019D3FF /* apple-touch-icon-114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon-114x114.png"; sourceTree = "<group>"; };
 		92F8600D168971710019D3FF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		92F86013168A175C0019D3FF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				92EA0596168D75E900A77A66 /* dominion_shield.png */,
 				92750B45168CF04100216713 /* sets.jpg */,
 				92750B43168CF00300216713 /* sets@2x.jpg */,
 				92F86011168971840019D3FF /* Default-568h@2x.png */,
@@ -253,6 +256,7 @@
 				92F8600C1689716B0019D3FF /* apple-touch-icon-114x114.png in Resources */,
 				92750B44168CF00300216713 /* sets@2x.jpg in Resources */,
 				92750B46168CF04100216713 /* sets.jpg in Resources */,
+				92EA0597168D75E900A77A66 /* dominion_shield.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

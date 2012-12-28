@@ -12,9 +12,11 @@
 
 @interface KingdomView : UICollectionViewController {
     NSMutableArray *kingdom_cards;
+    bool loaded;
 }
 
 - (void) refresh_cards;
 @property(nonatomic,retain) NSMutableArray *kingdom_cards;
+@property bool loaded;
 @property NSInteger selected_index;
 @end

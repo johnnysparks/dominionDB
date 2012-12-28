@@ -30,14 +30,6 @@
 @synthesize bottom_text;
 @synthesize description;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -69,19 +61,5 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
-- (void)viewDidUnload
-{
-//    [self setAuthorName:nil];
-//    [self setAuthorTitle:nil];
-//    [self setAuthorGenre:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
 
 @end
