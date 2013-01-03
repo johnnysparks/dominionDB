@@ -165,19 +165,19 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CardCell" editingAccessoryType="disclosureIndicator" textLabel="iMm-bs-ppl" detailTextLabel="WHs-9V-TB8" style="IBUITableViewCellStyleSubtitle" id="ymN-ZW-Nwk">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CardCell" editingAccessoryType="disclosureIndicator" textLabel="tBz-Su-3bH" detailTextLabel="HRU-4L-idL" style="IBUITableViewCellStyleSubtitle" id="ymN-ZW-Nwk">
                                 <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMm-bs-ppl">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBz-Su-3bH">
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHs-9V-TB8">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRU-4L-idL">
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -324,13 +324,14 @@
             </objects>
             <point key="canvasLocation" x="-2216" y="-769"/>
         </scene>
-        <!--Kingdom View - Kingdom-->
+        <!--Kingdom View-->
         <scene sceneID="ibz-UX-1W0">
             <objects>
                 <collectionViewController storyboardIdentifier="KingdomView" autoresizesArchivedViewToFullSize="NO" modalPresentationStyle="pageSheet" id="EuF-FH-Kt2" customClass="KingdomView" sceneMemberID="viewController">
-                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottom" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="GUl-Kr-cv9">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="GUl-Kr-cv9">
                         <rect key="frame" x="0.0" y="20" width="703" height="748"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Oq5-gF-dtl">
                             <size key="itemSize" width="345" height="141"/>
@@ -346,33 +347,78 @@
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="141"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v7w-5n-aUh">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Card Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhJ-o6-ulc">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="180" id="kPG-Os-HNU"/>
+                                                <constraint firstAttribute="height" constant="21" id="fxC-cw-2oT"/>
+                                                <constraint firstAttribute="width" constant="186" id="ncc-NN-39R"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Card Set" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wi-b6-Pz8">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="127" id="8mu-xw-BBd"/>
+                                                <constraint firstAttribute="height" constant="21" id="QLS-Wo-hT4"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9w-Tr-819">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="29" id="PcQ-uA-u5r"/>
+                                                <constraint firstAttribute="height" constant="30" id="iZb-Pp-Gj6"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                            <state key="normal" title="r">
+                                                <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="replace:" destination="tvW-G8-5iV" eventType="touchUpInside" id="CbC-5r-pcZ"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.70000000000000007" contentMode="center" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyM-Kw-WCF">
+                                            <color key="backgroundColor" red="0.87110732710000005" green="0.96412649620000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="49" id="7Ff-5j-s7i"/>
+                                                <constraint firstAttribute="height" constant="50" id="KOF-OT-FxF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.87110732705048699" green="0.96412649624073044" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.98776489967774572" green="1" blue="0.87840916294078886" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="v7w-5n-aUh" firstAttribute="centerX" secondItem="tvW-G8-5iV" secondAttribute="centerX" type="default" id="6W5-5Z-RtU"/>
-                                    <constraint firstItem="v7w-5n-aUh" firstAttribute="top" secondItem="tvW-G8-5iV" secondAttribute="top" constant="20" type="default" id="r3H-qR-NAR"/>
+                                    <constraint firstItem="m9w-Tr-819" firstAttribute="top" secondItem="tvW-G8-5iV" secondAttribute="top" constant="9" id="DBD-aK-uL0"/>
+                                    <constraint firstAttribute="trailing" secondItem="m9w-Tr-819" secondAttribute="trailing" constant="11" id="Gxs-Be-16M"/>
+                                    <constraint firstItem="PhJ-o6-ulc" firstAttribute="leading" secondItem="tvW-G8-5iV" secondAttribute="leading" constant="62" id="XYL-ma-5cv"/>
+                                    <constraint firstItem="8Wi-b6-Pz8" firstAttribute="top" secondItem="tvW-G8-5iV" secondAttribute="top" constant="28" id="cU8-ql-2ub"/>
+                                    <constraint firstItem="8Wi-b6-Pz8" firstAttribute="leading" secondItem="tvW-G8-5iV" secondAttribute="leading" constant="63" id="dbP-Hh-UfS"/>
+                                    <constraint firstItem="QyM-Kw-WCF" firstAttribute="top" secondItem="tvW-G8-5iV" secondAttribute="top" constant="4" id="evN-dB-4qN"/>
+                                    <constraint firstItem="PhJ-o6-ulc" firstAttribute="top" secondItem="tvW-G8-5iV" secondAttribute="top" constant="10" id="hCE-4n-9IS"/>
+                                    <constraint firstItem="QyM-Kw-WCF" firstAttribute="leading" secondItem="tvW-G8-5iV" secondAttribute="leading" constant="7" id="meH-Rs-L0n"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="name" destination="v7w-5n-aUh" id="PcG-CC-ZBk"/>
-                                    <segue destination="hsG-fR-rAS" kind="modal" id="M0K-E4-hcC"/>
+                                    <outlet property="coins" destination="QyM-Kw-WCF" id="LmD-QN-MIU"/>
+                                    <outlet property="name" destination="PhJ-o6-ulc" id="V91-oU-eKb"/>
+                                    <outlet property="set" destination="8Wi-b6-Pz8" id="6Cq-LR-u4g"/>
+                                    <segue destination="hsG-fR-rAS" kind="modal" id="aZB-pl-U4L"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="dataSource" destination="EuF-FH-Kt2" id="ZEq-4e-9Pc"/>
                             <outlet property="delegate" destination="EuF-FH-Kt2" id="6x5-hi-SXN"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Kingdom" id="rrO-Ct-qq6"/>
                     <toolbarItems/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTs-7V-dd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -678,7 +724,10 @@
         <class className="CardCell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CardCell.h"/>
             <relationships>
-                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
+                <relationship kind="action" name="replace:"/>
+                <relationship kind="outlet" name="coins" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="set" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="CardDetailView" superclassName="UIViewController">
@@ -703,6 +752,9 @@
         </class>
         <class className="KingdomView" superclassName="UICollectionViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/KingdomView.h"/>
+            <relationships>
+                <relationship kind="action" name="replace:"/>
+            </relationships>
         </class>
         <class className="ListView" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ListView.h"/>
@@ -739,9 +791,6 @@
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
         </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
@@ -749,8 +798,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bEC-zH-xlO"/>
-        <segue reference="cj1-wx-9U8"/>
-        <segue reference="KBK-Xi-E7G"/>
+        <segue reference="eK6-wq-5Yk"/>
+        <segue reference="mNB-F2-bzR"/>
+        <segue reference="aZB-pl-U4L"/>
     </inferredMetricsTieBreakers>
 </document>

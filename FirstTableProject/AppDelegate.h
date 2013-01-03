@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
+    
+}
+
+#define Dominion (AppDelegate *)[[UIApplication sharedApplication] delegate]
 
 @property (strong, nonatomic) UIWindow *window;
 

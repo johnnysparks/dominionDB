@@ -10,6 +10,8 @@
 
 @implementation CardCell
 
+@synthesize id;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -27,5 +29,9 @@
     // Drawing code
 }
 */
+- (IBAction)replace:(id)sender {
+    NSLog(@"%d", self.id);
+}
+
 
 @end

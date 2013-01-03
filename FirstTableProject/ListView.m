@@ -116,16 +116,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     int rowCount = indexPath.row;
-
+    Card *card = [self.kingdom_cards objectAtIndex:rowCount];
+    
     if (tableView == self.searchDisplayController.searchResultsTableView) {
-        Card *card = [search_results objectAtIndex:rowCount];
-        cell.textLabel.text = card.name;
-        cell.detailTextLabel.text = card.set;
-    } else {
-        Card *card = [self.kingdom_cards objectAtIndex:rowCount];
-        cell.textLabel.text = card.name;
-        cell.detailTextLabel.text = card.set;
+        card = [search_results objectAtIndex:rowCount];
     }
+    
+    cell.textLabel.text = card.name;
+    cell.detailTextLabel.text = card.set;
     
     return cell;
 }

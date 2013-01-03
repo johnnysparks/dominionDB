@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-@interface CardCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UITextField *name;
+@interface CardCell : UICollectionViewCell{
+    int id;
+}
+
+@property (nonatomic) int id;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *set;
+@property (weak, nonatomic) IBOutlet UILabel *coins;
 
 @end

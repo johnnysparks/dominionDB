@@ -72,7 +72,11 @@
     CardCell *card_cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CardCell" forIndexPath:indexPath];
     int row = [indexPath row];
     Card *card = kingdom_cards[row];
-    card_cell.name.text = card.name;    
+    card_cell.name.text = card.name;
+    card_cell.set.text = card.set;
+    card_cell.coins.text = [NSString stringWithFormat:@"%d", card.cost_coins];
+    card_cell.id = card.id;
+    
     return card_cell;
 }
 
@@ -96,6 +100,16 @@
         NSLog(@"%@", card.name);
     }    
     return kingdom_cards;
+}
+
+- (IBAction)replace:(id)sender {
+    NSLog(@"%@", sender);
+    for(int i = 0; i < kingdom_cards.count; i++) {
+        Card *card = kingdom_cards[i];
+        NSLog(@"%d", card.id);
+        NSLog(@"%@", card.name);
+    }
+    NSLog(@"%@", self);
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
