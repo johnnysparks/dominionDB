@@ -9,15 +9,14 @@
 #import "KingdomView.h"
 #import "Card.h"
 #import "Query.h"
+#import "DominionVars.h"
 
 @interface KingdomView ()
 
 @end
 
 @implementation KingdomView
-@synthesize kingdom_cards;
 @synthesize selected_index;
-@synthesize loaded;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,12 +31,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    if(!loaded) {
-        NSLog(@"loaded");
+    DominionVars *dominion = [DominionVars sharedVars];
+    if(!dominion.loaded) {
         [self get_cards];
-        loaded = true;
+        dominion.loaded = true;
     }
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,9 +46,10 @@
 
 - (void)collectionView:(UICollectionView *)collectionView
     didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    DominionVars *dominion = [DominionVars sharedVars];
     selected_index = indexPath.row;
     NSLog(@"Selected index %d", selected_index);
-    Card *card = [kingdom_cards objectAtIndex:selected_index];
+    Card *card = [dominion.kingdom_cards objectAtIndex:selected_index];
     NSLog(@"Card Name %@", card.name);
 }
 
@@ -63,15 +62,17 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView
     numberOfItemsInSection:(NSInteger)section
 {
-    return kingdom_cards.count;
+    DominionVars *dominion = [DominionVars sharedVars];
+    return dominion.kingdom_cards.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    DominionVars *dominion = [DominionVars sharedVars];
     CardCell *card_cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CardCell" forIndexPath:indexPath];
     int row = [indexPath row];
-    Card *card = kingdom_cards[row];
+    Card *card = dominion.kingdom_cards[row];
     card_cell.name.text = card.name;
     card_cell.set.text = card.set;
     card_cell.coins.text = [NSString stringWithFormat:@"%d", card.cost_coins];
@@ -86,26 +87,25 @@
     [self.collectionView reloadData];
 }
 
--(NSMutableArray *) get_cards{
-    GameOptions *options = [[GameOptions alloc] init];
+-(void) get_cards{
+    DominionVars *dominion = [DominionVars sharedVars];
     Query *query = [[Query alloc] init];
-    if(kingdom_cards == nil) {
-        options.type = @"random";
-        query.options = options;
+    if(dominion.kingdom_cards == nil) {
+        dominion.query_type = @"custom";
         [query get_cards];
-        kingdom_cards = query.cards;
+        dominion.kingdom_cards = query.cards;
     }
-    if(kingdom_cards.count > 0) {
-        Card *card = kingdom_cards[0];
+    if(dominion.kingdom_cards.count > 0) {
+        Card *card = dominion.kingdom_cards[0];
         NSLog(@"%@", card.name);
     }    
-    return kingdom_cards;
 }
 
 - (IBAction)replace:(id)sender {
+    DominionVars *dominion = [DominionVars sharedVars];
     NSLog(@"%@", sender);
-    for(int i = 0; i < kingdom_cards.count; i++) {
-        Card *card = kingdom_cards[i];
+    for(int i = 0; i < dominion.kingdom_cards.count; i++) {
+        Card *card = dominion.kingdom_cards[i];
         NSLog(@"%d", card.id);
         NSLog(@"%@", card.name);
     }
@@ -113,13 +113,14 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    DominionVars *dominion = [DominionVars sharedVars];
     CardCell *cell = (CardCell *)sender;
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
     
     int i = indexPath.row%10;
     
     CardDetailView *detailViewController = [segue destinationViewController];
-    detailViewController.card = [kingdom_cards objectAtIndex:i];
+    detailViewController.card = [dominion.kingdom_cards objectAtIndex:i];
  
 }
 

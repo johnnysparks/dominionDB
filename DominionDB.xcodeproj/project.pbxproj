@@ -10,7 +10,6 @@
 		92750B44168CF00300216713 /* sets@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92750B43168CF00300216713 /* sets@2x.jpg */; };
 		92750B46168CF04100216713 /* sets.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92750B45168CF04100216713 /* sets.jpg */; };
 		92750B49168CF27900216713 /* RandomizerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92750B48168CF27900216713 /* RandomizerView.m */; };
-		92750B4C168D0E0700216713 /* GameOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 92750B4B168D0E0700216713 /* GameOptions.m */; };
 		929A2D7F168CBAB000C4386E /* Query.m in Sources */ = {isa = PBXBuildFile; fileRef = 929A2D7E168CBAB000C4386E /* Query.m */; };
 		92BE70BE1688F62F00ED4BE6 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70BD1688F62F00ED4BE6 /* iPad.storyboard */; };
 		92BE70DB1689325300ED4BE6 /* apple-touch-icon-144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70DA1689325300ED4BE6 /* apple-touch-icon-144x144.png */; };
@@ -20,6 +19,7 @@
 		92BE70E31689329700ED4BE6 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70E21689329600ED4BE6 /* Default-Portrait~ipad.png */; };
 		92BE70E51689329C00ED4BE6 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70E41689329C00ED4BE6 /* Default-Landscape~ipad.png */; };
 		92BE70E8168944E100ED4BE6 /* dominion.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 92BE70E7168942F100ED4BE6 /* dominion.sqlite */; };
+		92E8DF611696455D000D2C76 /* DominionVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E8DF601696455D000D2C76 /* DominionVars.m */; };
 		92EA0597168D75E900A77A66 /* dominion_shield.png in Resources */ = {isa = PBXBuildFile; fileRef = 92EA0596168D75E900A77A66 /* dominion_shield.png */; };
 		92F86009168971690019D3FF /* apple-touch-icon-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F86008168971690019D3FF /* apple-touch-icon-57x57.png */; };
 		92F8600C1689716B0019D3FF /* apple-touch-icon-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F8600B1689716B0019D3FF /* apple-touch-icon-114x114.png */; };
@@ -43,8 +43,6 @@
 		92750B45168CF04100216713 /* sets.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sets.jpg; path = FirstTableProject/images/sets.jpg; sourceTree = "<group>"; };
 		92750B47168CF27900216713 /* RandomizerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomizerView.h; sourceTree = "<group>"; };
 		92750B48168CF27900216713 /* RandomizerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomizerView.m; sourceTree = "<group>"; };
-		92750B4A168D0E0700216713 /* GameOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOptions.h; sourceTree = "<group>"; };
-		92750B4B168D0E0700216713 /* GameOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOptions.m; sourceTree = "<group>"; };
 		929A2D7D168CBAB000C4386E /* Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Query.h; sourceTree = "<group>"; };
 		929A2D7E168CBAB000C4386E /* Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Query.m; sourceTree = "<group>"; };
 		92BE70BD1688F62F00ED4BE6 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
@@ -55,6 +53,8 @@
 		92BE70E21689329600ED4BE6 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		92BE70E41689329C00ED4BE6 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		92BE70E7168942F100ED4BE6 /* dominion.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dominion.sqlite; sourceTree = "<group>"; };
+		92E8DF5F1696455D000D2C76 /* DominionVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DominionVars.h; sourceTree = "<group>"; };
+		92E8DF601696455D000D2C76 /* DominionVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DominionVars.m; sourceTree = "<group>"; };
 		92EA0596168D75E900A77A66 /* dominion_shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dominion_shield.png; path = FirstTableProject/images/dominion_shield.png; sourceTree = "<group>"; };
 		92F86008168971690019D3FF /* apple-touch-icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon-57x57.png"; sourceTree = "<group>"; };
 		92F8600B1689716B0019D3FF /* apple-touch-icon-114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apple-touch-icon-114x114.png"; sourceTree = "<group>"; };
@@ -155,6 +155,8 @@
 			children = (
 				F21896ED148D953C00309A50 /* Supporting Files */,
 				92BE70E7168942F100ED4BE6 /* dominion.sqlite */,
+				92E8DF5F1696455D000D2C76 /* DominionVars.h */,
+				92E8DF601696455D000D2C76 /* DominionVars.m */,
 				F21896F5148D953C00309A50 /* AppDelegate.h */,
 				F21896F6148D953C00309A50 /* AppDelegate.m */,
 				F21896F8148D953C00309A50 /* MainStoryboard.storyboard */,
@@ -173,8 +175,6 @@
 				92F8601B168A31C70019D3FF /* CardCell.m */,
 				929A2D7D168CBAB000C4386E /* Query.h */,
 				929A2D7E168CBAB000C4386E /* Query.m */,
-				92750B4A168D0E0700216713 /* GameOptions.h */,
-				92750B4B168D0E0700216713 /* GameOptions.m */,
 			);
 			name = classes;
 			path = FirstTableProject;
@@ -276,7 +276,7 @@
 				92F8601C168A31C70019D3FF /* CardCell.m in Sources */,
 				929A2D7F168CBAB000C4386E /* Query.m in Sources */,
 				92750B49168CF27900216713 /* RandomizerView.m in Sources */,
-				92750B4C168D0E0700216713 /* GameOptions.m in Sources */,
+				92E8DF611696455D000D2C76 /* DominionVars.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

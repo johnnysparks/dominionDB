@@ -8,10 +8,10 @@
 
 #import "Query.h"
 #import "Card.h"
+#import "DominionVars.h"
 
 @implementation Query
 
-@synthesize options;
 @synthesize cards;
 @synthesize sql;
 
@@ -25,21 +25,36 @@
 }
 
 - (void) create_query {
-    if(options.type == @"list") {
+    DominionVars *dominion = [DominionVars sharedVars];
+    
+    NSLog(@"Query Type: %@", dominion.query_type);
+    
+    if(dominion.query_type == @"list") {
         sql = "SELECT * FROM kingdom_cards";
-    } else if(options.type == @"random") {
-        sql = "SELECT * FROM kingdom_cards ORDER BY RANDOM() LIMIT 10";
-    } else if(options.type == @"custom"){
+    } else if(dominion.query_type == @"custom"){
         //this is where i will build a query statement based on an object of options passed
         NSString* query = @"SELECT * FROM kingdom_cards WHERE id IS NOT NULL AND expansion_set IN (";
         NSMutableString *sqlStatement = [NSMutableString stringWithString:query];
         
-        for(int i = 0; i < options.sets.count; i++) {
-            [sqlStatement appendString:@"'"];
-            [sqlStatement appendString:options.sets[i]];
-            [sqlStatement appendString:@"'"];
-            if(i+1 != options.sets.count) { [sqlStatement appendString:@", "]; }
-        }
+        
+        
+//        for(int i = 0; i < options.sets.count; i++) {
+//            [sqlStatement appendString:@"'"];
+//            [sqlStatement appendString:options.sets[i]];
+//            [sqlStatement appendString:@"'"];
+//            if(i+1 != options.sets.count) { [sqlStatement appendString:@", "]; }
+//        }
+        
+        if (dominion.base)        { [sqlStatement appendString:@"'Basic', "]; }
+        if (dominion.intrigue)    { [sqlStatement appendString:@"'Intrigue', "]; }
+        if (dominion.seaside)     { [sqlStatement appendString:@"'Seaside', "]; }
+        if (dominion.alchemy)     { [sqlStatement appendString:@"'Alchemy', "]; }
+        if (dominion.prosperity)  { [sqlStatement appendString:@"'Prosperity', "]; }
+        if (dominion.cornucopia)  { [sqlStatement appendString:@"'Cornucopia', "]; }
+        if (dominion.hinterlands) { [sqlStatement appendString:@"'Hinterlands', "]; }
+        if (dominion.darkages)    { [sqlStatement appendString:@"'Darkages', "]; }
+        if (dominion.promo)       { [sqlStatement appendString:@"'Promo', "]; }
+        [sqlStatement deleteCharactersInRange:NSMakeRange([sqlStatement length]-2, 1)];
         
         [sqlStatement appendString:@") ORDER BY RANDOM() LIMIT 10"];        
         

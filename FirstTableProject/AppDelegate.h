@@ -12,8 +12,6 @@
     
 }
 
-#define Dominion (AppDelegate *)[[UIApplication sharedApplication] delegate]
-
 @property (strong, nonatomic) UIWindow *window;
 
 @end

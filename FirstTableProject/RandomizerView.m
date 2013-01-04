@@ -8,17 +8,14 @@
 
 #import "RandomizerView.h"
 #import "Query.h"
-#import "GameOptions.h"
 #import "Card.h"
+#import "DominionVars.h"
 
 @interface RandomizerView ()
 
 @end
 
 @implementation RandomizerView
-
-@synthesize kingdom_cards;
-@synthesize kingdomView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,8 +29,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    DominionVars *dominion = [DominionVars sharedVars];
+    _base.on        = dominion.base;
+    _intrigue.on    = dominion.intrigue;
+    _seaside.on     = dominion.seaside;
+    _alchemy.on     = dominion.alchemy;
+    _prosperity.on  = dominion.prosperity;
+    _cornucopia.on  = dominion.cornucopia;
+    _hinterlands.on = dominion.hinterlands;
+    _darkages.on    = dominion.darkages;
+    _promo.on       = dominion.promo;
+    
 	// Do any additional setup after loading the view.
 }
+
+- (IBAction)trigger:(UISwitch *)sender {
+    DominionVars *dominion = [DominionVars sharedVars];
+    dominion.base        = _base.on;
+    dominion.intrigue    = _intrigue.on;
+    dominion.seaside     = _seaside.on;
+    dominion.alchemy     = _alchemy.on;
+    dominion.prosperity  = _prosperity.on;
+    dominion.cornucopia  = _cornucopia.on;
+    dominion.hinterlands = _hinterlands.on;
+    dominion.darkages    = _darkages.on;
+    dominion.promo       = _promo.on;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -43,39 +65,13 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    KingdomView *kingdomViewController = [segue destinationViewController];
-    GameOptions *options = [[GameOptions alloc] init];
-    options.type        = @"custom";
+    DominionVars *dominion = [DominionVars sharedVars];
     
-    NSString *base = @"Basic";
-    NSString *intrigue = @"Intrigue";
-    NSString *seaside = @"Seaside";
-    NSString *alchemy = @"Alchemy";
-    NSString *prosperity = @"Prosperity";
-    NSString *cornucopia = @"Cornucopia";
-    NSString *hinterlands = @"Hinterlands";
-    NSString *darkages = @"Darkages";
-    NSString *promo = @"Promo";
-    
-    NSMutableArray *temp_sets = [[NSMutableArray alloc] init];
-    
-    if(_base.on)        {[temp_sets addObject:base];}
-    if(_intrigue.on)    {[temp_sets addObject:intrigue];}
-    if(_seaside.on)     {[temp_sets addObject:seaside];}
-    if(_alchemy.on)     {[temp_sets addObject:alchemy];}
-    if(_prosperity.on)  {[temp_sets addObject:prosperity];}
-    if(_cornucopia.on)  {[temp_sets addObject:cornucopia];}
-    if(_hinterlands.on) {[temp_sets addObject:hinterlands];}
-    if(_darkages.on)    {[temp_sets addObject:darkages];}
-    if(_promo.on)       {[temp_sets addObject:promo];}
-    
-    options.sets = temp_sets;
+    dominion.query_type = @"custom";
     
     Query *query = [[Query alloc] init];
-    query.options = options;
     [query get_cards];
-    kingdom_cards = query.cards;
-    kingdomViewController.kingdom_cards = kingdom_cards;
+    dominion.kingdom_cards = query.cards;
     
 }
 
