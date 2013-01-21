@@ -7,10 +7,12 @@
 //
 
 #import "CardCell.h"
+#import "DominionVars.h"
 
 @implementation CardCell
 
 @synthesize id;
+@synthesize card_index;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -30,7 +32,9 @@
 }
 */
 - (IBAction)replace:(id)sender {
-    NSLog(@"%d", self.id);
+    DominionVars *dominion = [DominionVars sharedVars];
+    dominion.replace_index = self.card_index;
+    NSLog(@"%@", dominion.replace_index);
 }
 
 

@@ -27,6 +27,8 @@ static DominionVars *shared = NULL;
 @synthesize kingdom_cards;
 @synthesize loaded;
 
+@synthesize replace_index;
+
 - (id)init
 {
     if ( self = [super init] )

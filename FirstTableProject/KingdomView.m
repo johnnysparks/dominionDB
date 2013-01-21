@@ -44,8 +44,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)collectionView:(UICollectionView *)collectionView
-    didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     DominionVars *dominion = [DominionVars sharedVars];
     selected_index = indexPath.row;
     NSLog(@"Selected index %d", selected_index);
@@ -53,21 +52,18 @@
     NSLog(@"Card Name %@", card.name);
 }
 
--(NSInteger)numberOfSectionsInCollectionView:
-(UICollectionView *)collectionView
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
 }
 
--(NSInteger)collectionView:(UICollectionView *)collectionView
-    numberOfItemsInSection:(NSInteger)section
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     DominionVars *dominion = [DominionVars sharedVars];
     return dominion.kingdom_cards.count;
 }
 
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
-                 cellForItemAtIndexPath:(NSIndexPath *)indexPath
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     DominionVars *dominion = [DominionVars sharedVars];
     CardCell *card_cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CardCell" forIndexPath:indexPath];
@@ -77,11 +73,14 @@
     card_cell.set.text = card.set;
     card_cell.coins.text = [NSString stringWithFormat:@"%d", card.cost_coins];
     card_cell.id = card.id;
-    
+    card_cell.card_index = indexPath;
     return card_cell;
 }
 
-- (void)refresh_cards {
+
+- (IBAction)refresh_cards:(id)sender {
+    DominionVars *dominion = [DominionVars sharedVars];
+    dominion.kingdom_cards = nil;
     NSLog(@"Refresh Cards");
     [self get_cards];
     [self.collectionView reloadData];
@@ -103,13 +102,13 @@
 
 - (IBAction)replace:(id)sender {
     DominionVars *dominion = [DominionVars sharedVars];
-    NSLog(@"%@", sender);
-    for(int i = 0; i < dominion.kingdom_cards.count; i++) {
-        Card *card = dominion.kingdom_cards[i];
-        NSLog(@"%d", card.id);
-        NSLog(@"%@", card.name);
-    }
-    NSLog(@"%@", self);
+    Query *query = [[Query alloc] init];
+    dominion.query_type = @"replace";
+    [query get_cards];
+    
+    int i = dominion.replace_index.row%10;
+    [dominion.kingdom_cards replaceObjectAtIndex:i withObject:query.cards[0]];
+    [self.collectionView reloadData];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

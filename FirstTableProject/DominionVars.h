@@ -27,6 +27,9 @@
     //storing cards after a query
     BOOL loaded;
     NSMutableArray *kingdom_cards;
+    
+    //storing card selections
+    NSIndexPath *replace_index;
 
 }
 
@@ -44,6 +47,8 @@
 
 @property (nonatomic, assign) BOOL loaded;
 @property(nonatomic) NSMutableArray *kingdom_cards;
+
+@property (nonatomic) NSIndexPath *replace_index;
 
 + (DominionVars *)sharedVars;
 

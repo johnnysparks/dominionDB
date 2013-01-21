@@ -14,6 +14,7 @@
 }
 
 @property (nonatomic) int id;
+@property (weak, nonatomic) NSIndexPath *card_index;
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *set;
 @property (weak, nonatomic) IBOutlet UILabel *coins;

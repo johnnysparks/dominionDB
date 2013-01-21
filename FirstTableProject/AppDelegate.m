@@ -9,11 +9,9 @@
 #import "AppDelegate.h"
 #import "Card.h"
 #import "ListView.h"
+#import "DominionVars.h"
 
-
-@implementation AppDelegate{
-    NSMutableArray *authors;
-}
+@implementation AppDelegate
 
 @synthesize window = _window;
 

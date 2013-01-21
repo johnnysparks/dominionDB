@@ -10,7 +10,8 @@
 #import "CardDetailView.h"
 #import "CardCell.h"
 
-@interface KingdomView : UICollectionViewController
+@interface KingdomView : UIViewController <UICollectionViewDataSource>
 
 @property NSInteger selected_index;
+@property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 @end
