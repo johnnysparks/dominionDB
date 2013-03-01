@@ -31,20 +31,26 @@
     
     if(dominion.query_type == @"list") {
         sql = "SELECT * FROM kingdom_cards";
-    } else if(dominion.query_type == @"custom"){
+    } else if(dominion.query_type == @"custom" || dominion.query_type == @"replace"){
         //this is where i will build a query statement based on an object of options passed
-        NSString* query = @"SELECT * FROM kingdom_cards WHERE id IS NOT NULL AND expansion_set IN (";
+        
+        NSString *query = @"SELECT * FROM kingdom_cards WHERE id ";
         NSMutableString *sqlStatement = [NSMutableString stringWithString:query];
         
         
-        
-//        for(int i = 0; i < options.sets.count; i++) {
-//            [sqlStatement appendString:@"'"];
-//            [sqlStatement appendString:options.sets[i]];
-//            [sqlStatement appendString:@"'"];
-//            if(i+1 != options.sets.count) { [sqlStatement appendString:@", "]; }
-//        }
-        
+        if(dominion.query_type == @"replace") {
+            [sqlStatement appendString:@"NOT IN ("];
+            for(int i = 0; i < dominion.kingdom_cards.count; i++) {
+                Card *card = dominion.kingdom_cards[i];
+                [sqlStatement appendString:[NSString stringWithFormat:@"%d, ", card.id]];
+                card = nil;
+            }
+            [sqlStatement deleteCharactersInRange:NSMakeRange([sqlStatement length]-2, 1)];
+            [sqlStatement appendString:@") "];
+        } else {
+            [sqlStatement appendString:@"IS NOT NULL "];
+        }
+        [sqlStatement appendString:@"AND expansion_set IN ("];
         if (dominion.base)        { [sqlStatement appendString:@"'Basic', "]; }
         if (dominion.intrigue)    { [sqlStatement appendString:@"'Intrigue', "]; }
         if (dominion.seaside)     { [sqlStatement appendString:@"'Seaside', "]; }
@@ -56,7 +62,10 @@
         if (dominion.promo)       { [sqlStatement appendString:@"'Promo', "]; }
         [sqlStatement deleteCharactersInRange:NSMakeRange([sqlStatement length]-2, 1)];
         
-        [sqlStatement appendString:@") ORDER BY RANDOM() LIMIT 10"];        
+        [sqlStatement appendString:@") ORDER BY RANDOM() LIMIT 1"];
+        if(dominion.query_type == @"custom") {
+         [sqlStatement appendString:@"0"];
+        }
         
         
         sql = [sqlStatement UTF8String];
