@@ -841,6 +841,7 @@
         <class className="CardCell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CardCell.h"/>
             <relationships>
+                <relationship kind="action" name="replace:"/>
                 <relationship kind="outlet" name="coins" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="name" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="set" candidateClass="UILabel"/>
@@ -869,6 +870,8 @@
         <class className="KingdomView" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/KingdomView.h"/>
             <relationships>
+                <relationship kind="action" name="refresh_cards:"/>
+                <relationship kind="action" name="replace:"/>
                 <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
             </relationships>
         </class>
@@ -884,6 +887,7 @@
         <class className="RandomizerView" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RandomizerView.h"/>
             <relationships>
+                <relationship kind="action" name="trigger:" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="alchemy" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="base" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="cornucopia" candidateClass="UISwitch"/>
